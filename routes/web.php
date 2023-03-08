@@ -23,3 +23,7 @@ Route::view("about","/about");
 Route::view('contact','/contact');
 
 Route::get('user/{id}',[UserController::class,'show']);
+
+Route::view('user','users');
+
+Route::view('privacy','privacy');
