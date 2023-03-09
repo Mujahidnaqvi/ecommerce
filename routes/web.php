@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\FruitsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,4 +50,15 @@ Route::get('allurl',function(){
 
 Route::get('urlpractice',function(){
    return view('url-practice');
+});
+
+Route::get('user',function(){
+  return view('user');
+});
+
+Route::get('fruits',[FruitsController::class,'fruitslist']);
+Route::get('fruits/array',[FruitsController::class,'fruitsarray']);
+
+Route::get('forloop', function(){
+   return view('for-loop');
 });
