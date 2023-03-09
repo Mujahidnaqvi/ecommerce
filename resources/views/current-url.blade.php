@@ -1,0 +1,1 @@
+<h1>This is the page url =  {{URL::current()}}</h1>

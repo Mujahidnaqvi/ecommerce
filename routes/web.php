@@ -34,3 +34,19 @@ Route::get('product/{productName}',[ProductController::class,'name']);
 Route::get('products/{names}', function ($name){
   return view('product-list',['name'=>$name]);
 });
+
+Route::get('url' ,function(){
+   return view('current-url');
+});
+
+Route::get('previous', function(){
+   return view('previous-url');
+});
+
+Route::get('allurl',function(){
+  return view('all-url');
+});
+
+Route::get('urlpractice',function(){
+   return view('url-practice');
+});
