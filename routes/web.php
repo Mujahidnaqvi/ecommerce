@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FruitsController;
+use App\Http\Controllers\IfelseController;
+use App\Http\Controllers\ForeachController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +61,6 @@ Route::get('user',function(){
 Route::get('fruits',[FruitsController::class,'fruitslist']);
 Route::get('fruits/array',[FruitsController::class,'fruitsarray']);
 
-Route::get('forloop', function(){
-   return view('for-loop');
-});
+Route::get('ifelse',[IfelseController::class,'check']);
+
+Route::get('foreach',[ForeachController::class,'showall']);
