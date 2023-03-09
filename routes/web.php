@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,9 @@ Route::get('user/{id}',[UserController::class,'show']);
 Route::view('user','users');
 
 Route::view('privacy','privacy');
+
+Route::get('product/{productName}',[ProductController::class,'name']);
+
+Route::get('products/{names}', function ($name){
+  return view('product-list',['name'=>$name]);
+});
