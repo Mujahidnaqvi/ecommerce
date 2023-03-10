@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\IfelseController;
 use App\Http\Controllers\ForeachController;
+use App\Http\Controllers\IncludeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,5 @@ Route::get('fruits/array',[FruitsController::class,'fruitsarray']);
 Route::get('ifelse',[IfelseController::class,'check']);
 
 Route::get('foreach',[ForeachController::class,'showall']);
+
+Route::get('include',[IncludeController::class,'jsarray']);
