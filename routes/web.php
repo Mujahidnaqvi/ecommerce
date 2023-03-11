@@ -74,3 +74,12 @@ Route::post('postformdata',[PostFormDataController::class,'postData']);
 
 Route::view('noaccess','noaccess');
 
+Route::group(['middleware'=>['checkLocation']],function(){
+
+  Route::view('check','group-middleware');
+  Route::view('checktwo','group-middleware-two');
+
+});
+
+
+
