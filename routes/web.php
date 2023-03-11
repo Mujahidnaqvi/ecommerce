@@ -73,3 +73,4 @@ Route::view('login','sign-in');
 Route::post('postformdata',[PostFormDataController::class,'postData']);
 
 Route::view('noaccess','noaccess');
+
