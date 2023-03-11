@@ -7,6 +7,7 @@ use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\IfelseController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
+use App\Http\Controllers\PostFormDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,6 @@ Route::get('ifelse',[IfelseController::class,'check']);
 Route::get('foreach',[ForeachController::class,'showall']);
 
 Route::get('include',[IncludeController::class,'jsarray']);
+
+Route::view('login','sign-in');
+Route::post('postformdata',[PostFormDataController::class,'postData']);
