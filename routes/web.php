@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\IfelseController;
@@ -84,4 +85,6 @@ Route::group(['middleware'=>['checkLocation']],function(){
 Route::view('single','single-route')->middleware('RouteStatus');
 Route::view('noaccess-single-route','noaccess-single-route');
 
+
+Route::get('allusers',[UsersController::class,'index']);
 
