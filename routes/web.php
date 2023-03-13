@@ -89,3 +89,4 @@ Route::view('noaccess-single-route','noaccess-single-route');
 Route::get('allusers',[UsersController::class,'index']);
 Route::get('allusers/create',[UsersController::class,'create']);
 
+Route::get('modelusers',[UsersController::class,'showData']);
