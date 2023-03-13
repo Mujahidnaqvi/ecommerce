@@ -10,6 +10,7 @@ use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\PostFormDataController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +93,5 @@ Route::get('allusers/create',[UsersController::class,'create']);
 
 Route::get('modelusers',[UsersController::class,'showData']);
 Route::get('modelemployee',[EmployeeController::class,'getData']);
+
+Route::get('api',[ApiController::class,'fetchData']);
