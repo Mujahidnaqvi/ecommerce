@@ -81,7 +81,7 @@ Route::group(['middleware'=>['checkLocation']],function(){
 
 });
 
-Route::view('single','single-route')->middleware('checkSingleRouteStatus');
-
+Route::view('single','single-route')->middleware('RouteStatus');
+Route::view('noaccess-single-route','noaccess-single-route');
 
 

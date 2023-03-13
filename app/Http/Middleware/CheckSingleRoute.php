@@ -15,7 +15,7 @@ class CheckSingleRoute
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->status && $status!=1){
+        if($request->status && $request->status!='1' || $request->status=='0'){
              return redirect('noaccess-single-route');
         }
         return $next($request);

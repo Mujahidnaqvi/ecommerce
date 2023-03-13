@@ -1,0 +1,1 @@
+<h1>You can only access this page in Single Route Middle ware</h1>
