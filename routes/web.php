@@ -9,6 +9,7 @@ use App\Http\Controllers\IfelseController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\PostFormDataController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,3 +91,4 @@ Route::get('allusers',[UsersController::class,'index']);
 Route::get('allusers/create',[UsersController::class,'create']);
 
 Route::get('modelusers',[UsersController::class,'showData']);
+Route::get('modelemployee',[EmployeeController::class,'getData']);
