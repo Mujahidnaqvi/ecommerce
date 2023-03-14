@@ -11,6 +11,7 @@ use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\PostFormDataController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\SignUpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +40,12 @@ Route::view('privacy','privacy');
 
 Route::get('product/{productName}',[ProductController::class,'name']);
 
+// How to get data  usign routes
 Route::get('products/{names}', function ($name){
   return view('product-list',['name'=>$name]);
 });
 
+// HOw to get url in laravel
 Route::get('url' ,function(){
    return view('current-url');
 });
@@ -66,6 +69,7 @@ Route::get('user',function(){
 Route::get('fruits',[FruitsController::class,'fruitslist']);
 Route::get('fruits/array',[FruitsController::class,'fruitsarray']);
 
+// Condtions Routes and Loops
 Route::get('ifelse',[IfelseController::class,'check']);
 
 Route::get('foreach',[ForeachController::class,'showall']);
@@ -77,6 +81,7 @@ Route::post('postformdata',[PostFormDataController::class,'postData']);
 
 Route::view('noaccess','noaccess');
 
+// Group Middleware
 Route::group(['middleware'=>['checkLocation']],function(){
 
   Route::view('check','group-middleware');
@@ -84,6 +89,7 @@ Route::group(['middleware'=>['checkLocation']],function(){
 
 });
 
+// Route Middleware
 Route::view('single','single-route')->middleware('RouteStatus');
 Route::view('noaccess-single-route','noaccess-single-route');
 
@@ -91,7 +97,16 @@ Route::view('noaccess-single-route','noaccess-single-route');
 Route::get('allusers',[UsersController::class,'index']);
 Route::get('allusers/create',[UsersController::class,'create']);
 
+// HOW TO GET DATA USING MODEL AND THE BEST WAY IS THIS MODEL
 Route::get('modelusers',[UsersController::class,'showData']);
 Route::get('modelemployee',[EmployeeController::class,'getData']);
 
+// HOW TO FETCH API DATA
 Route::get('api',[ApiController::class,'fetchData']);
+
+// HTTP all POST GET PUT AND DELETE
+Route::post('signup/post',[SignUpController::class,'create']);
+Route::get('signup/get',[SignUpController::class,'read']);
+Route::delete('signup/delete',[SignUpController::class,'delete']);
+Route::put('signup/update',[SignUpController::class,'update']);
+Route::view('signup','sign-up');
