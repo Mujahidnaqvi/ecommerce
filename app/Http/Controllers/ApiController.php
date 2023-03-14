@@ -10,6 +10,6 @@ class ApiController extends Controller
     //
     function fetchData(){
         $data = Http::get('https://reqres.in/api/users?page=1 ');
-        return view('');
+        return view('api',['fechedData'=>$data['data']]);
     }
 }
