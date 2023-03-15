@@ -110,3 +110,4 @@ Route::get('signup/get',[SignUpController::class,'read']);
 Route::delete('signup/delete',[SignUpController::class,'delete']);
 Route::put('signup/update',[SignUpController::class,'update']);
 Route::view('signup','sign-up');
+Route::view('signupget','sign-up-get');

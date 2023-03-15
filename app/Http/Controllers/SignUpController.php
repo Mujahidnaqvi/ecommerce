@@ -11,8 +11,8 @@ class SignUpController extends Controller
         return $req->input();
     }
 
-    function read(){
-
+    function read(Request $req){
+    return $req;
     }
     
     function delete(){
