@@ -1,5 +1,7 @@
 <h2>Flash Session</h2>
-
+@if (session('user'))
+    <h3>Data has been save Successfully for {{ session('user') }}</h3>
+@endif
 <form action="flashsession" method="POST">
 @csrf
 <input type="text" name="username" placeholder="Enter Username">
