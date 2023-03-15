@@ -15,11 +15,13 @@ class SignUpController extends Controller
     return $req;
     }
     
-    function delete(){
+    function delete(Request $req){
+        return $req;
 
     }
 
-    function update(){
+    function update(Request $req){
+        return $req;
 
     }
 }

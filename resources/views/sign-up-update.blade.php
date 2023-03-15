@@ -1,4 +1,6 @@
-<form action="signup/get" method="GET">  
+<form action="signup/update" method="POST"> 
+        @csrf
+        {{method_field('PUT')}} 
         <label>Username : </label>   
         <input type="text" placeholder="Enter Username" name="username" required>  
         <br>
