@@ -116,5 +116,5 @@ Route::view('signupdelete','sign-up-delete');
 Route::view('signupupdate','sign-up-update');
 
 // Flash Session
-Route::get('flashsession',[FlashSessionController::class,'sessionFlash']);
-Route::view('flash','flash_form');
+Route::post('flashsession',[FlashSessionController::class,'sessionFlash']);
+Route::view('flash','flash-form');
