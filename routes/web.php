@@ -1,17 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\IfelseController;
+use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
-use App\Http\Controllers\PostFormDataController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\ApiController;
-use App\Http\Controllers\SignUpController;
+use App\Http\Controllers\FlashSessionController;
+use App\Http\Controllers\PostFormDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,3 +114,6 @@ Route::view('signup','sign-up');
 Route::view('signupget','sign-up-get');
 Route::view('signupdelete','sign-up-delete');
 Route::view('signupupdate','sign-up-update');
+
+// Flash Session
+Route::view('flashsession',[FlashSessionController::class,'sessionFlash']);
