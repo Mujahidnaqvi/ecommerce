@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class SignUpController extends Controller
 {
     //
-    function create(){
-
+    function create(Request $req){
+        return $req->input();
     }
 
     function read(){
