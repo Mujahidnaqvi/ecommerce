@@ -121,7 +121,13 @@ Route::post('flashsession',[FlashSessionController::class,'sessionFlash']);
 Route::view('flash','flash-form');
 
 // Session for login
-Route::view('sessionsignin','session-sign-in');
+// Route::view('sessionsignin','session-sign-in');
+Route::get('sessionsignin',function(){
+      if (session()->has('user')) {
+        return redirect('profile');
+      }
+    return view('session-sign-in');
+});
 Route::view('profile','userprofile');
 Route::post('sessionsignin/create',[AuthUserController::class,'userLogin']);
 
