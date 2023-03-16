@@ -1,0 +1,1 @@
+<h3>The user profile name is {{ session('user') }}</h3>
