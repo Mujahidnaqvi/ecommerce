@@ -10,6 +10,7 @@ use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthUserController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\PostFormDataController;
@@ -121,4 +122,4 @@ Route::view('flash','flash-form');
 
 // Session for login
 Route::view('sessionsignin','session-sign-in');
-Route::post('sessionsigin/create',[]);
+Route::post('sessionsignin/create',[AuthUserController::class,'userLogin']);

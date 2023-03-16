@@ -1,6 +1,6 @@
 <h3>Session Sign in form</h3>
 
-<form action="sessionsign/create" method="POST">
+<form action="sessionsignin/create" method="POST">
 
    @csrf
 
