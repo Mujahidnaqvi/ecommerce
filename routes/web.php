@@ -122,6 +122,7 @@ Route::view('flash','flash-form');
 
 // Session for login
 // Route::view('sessionsignin','session-sign-in');
+// check if the user is logged in then send to profile page
 Route::get('sessionsignin',function(){
       if (session()->has('user')) {
         return redirect('profile');
