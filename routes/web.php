@@ -124,3 +124,8 @@ Route::view('flash','flash-form');
 Route::view('sessionsignin','session-sign-in');
 Route::view('profile','userprofile');
 Route::post('sessionsignin/create',[AuthUserController::class,'userLogin']);
+
+// Logout 
+Route::get('logout',function(){
+  return "working";
+});
