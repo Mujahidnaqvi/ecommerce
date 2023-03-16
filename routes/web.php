@@ -127,5 +127,8 @@ Route::post('sessionsignin/create',[AuthUserController::class,'userLogin']);
 
 // Logout 
 Route::get('logout',function(){
-  return "working";
+  if (session()->has('user')) {
+    session()->pull('user',null);
+  }
+  return redirect('sessionsignin');
 });
