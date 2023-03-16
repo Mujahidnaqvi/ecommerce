@@ -118,3 +118,6 @@ Route::view('signupupdate','sign-up-update');
 // Flash Session
 Route::post('flashsession',[FlashSessionController::class,'sessionFlash']);
 Route::view('flash','flash-form');
+
+// Session for login
+Route::view('sessionsignin','session-sign-in');
