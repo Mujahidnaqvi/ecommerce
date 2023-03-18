@@ -140,3 +140,5 @@ Route::get('logout',function(){
   return redirect('sessionsignin');
 });
 
+// Upload file
+Route::view('uploadfile','upload-file');
