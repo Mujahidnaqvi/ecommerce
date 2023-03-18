@@ -9,7 +9,8 @@ class UploadFileController extends Controller
     //
     function uploadFile(Request $req){
         //  echo "working";
-        $req->file('ufile')->store('image');
-        
+        $data = $req->file('ufile')->store('public/storage');
+        $req->session()->flash('uploaded',$data);
+        return redirect('uploadfile');
     }
 }
