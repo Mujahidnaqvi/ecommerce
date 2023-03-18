@@ -142,3 +142,4 @@ Route::get('logout',function(){
 
 // Upload file
 Route::view('uploadfile','upload-file');
+Route::post('uploadfile',[UploadFileController::class,'uploadFile']);
