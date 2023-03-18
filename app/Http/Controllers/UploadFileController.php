@@ -9,5 +9,7 @@ class UploadFileController extends Controller
     //
     function uploadFile(Request $req){
         //  echo "working";
+        $req->file('ufile')->store('image');
+        
     }
 }

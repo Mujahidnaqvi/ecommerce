@@ -3,7 +3,7 @@
 
 @csrf
 
-<input type="file" name="file" id="">
+<input type="file" name="ufile" id="">
 
 <button type="submit">Upload</button>
 
