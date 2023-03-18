@@ -139,3 +139,4 @@ Route::get('logout',function(){
   }
   return redirect('sessionsignin');
 });
+
