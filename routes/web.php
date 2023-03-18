@@ -12,6 +12,7 @@ use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthUserController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\PostFormDataController;
 

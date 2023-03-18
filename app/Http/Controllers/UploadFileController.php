@@ -7,4 +7,7 @@ use Illuminate\Http\Request;
 class UploadFileController extends Controller
 {
     //
+    function uploadFile(){
+         echo "working";
+    }
 }
