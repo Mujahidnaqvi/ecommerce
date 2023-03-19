@@ -13,5 +13,6 @@ class UploadFileController extends Controller
         // return $data;
         $req->session()->flash('uploaded',$data);
         return redirect('uploadfile');
+        // Done uploadig
     }
 }
