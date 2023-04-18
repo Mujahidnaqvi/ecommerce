@@ -11,6 +11,7 @@ use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthUserController;
+use App\Http\Controllers\CarsListController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\FlashSessionController;
@@ -152,3 +153,7 @@ Route::get('pages/{lang}',function($lang){
    App::setlocale($lang);
    return view('pages');
 });
+
+// how to fetch data from database
+
+Route::get('carslist', [CarsListController::class, 'show']);
