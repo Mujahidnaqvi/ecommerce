@@ -146,4 +146,9 @@ Route::view('uploadfile','upload-file');
 Route::post('uploadfile',[UploadFileController::class,'uploadFile']);
 
 // Localization
-Route::view('pages','pages');
+// Route::view('pages','pages');
+
+Route::get('pages/{lang}',function($lang){
+   App::setlocale($lang);
+   return view('pages');
+});

@@ -1,5 +1,5 @@
-<h1>Welcome to our Pages page</h1>
+<h1>{{__('pages.Welcome')}}</h1>
 
-<h3>Home</h3>
-<h3>About</h3>
-<h3>Contact Us</h3>
+<a href=""><h3>{{__('pages.Home')}}</h3></a>
+<a href=""><h3>{{__('pages.About')}}</h3></a>
+<a href=""><h3>{{__('pages.Contact')}}</h3></a>
