@@ -145,6 +145,5 @@ Route::get('logout',function(){
 Route::view('uploadfile','upload-file');
 Route::post('uploadfile',[UploadFileController::class,'uploadFile']);
 
-// 
-
-Route::get();
+// Localization
+Route::view('pages','pages');
