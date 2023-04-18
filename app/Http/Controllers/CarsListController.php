@@ -65,4 +65,8 @@ class CarsListController extends Controller
     {
         //
     }
+
+    public function operation(){
+        
+    }
 }

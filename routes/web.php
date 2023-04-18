@@ -157,3 +157,7 @@ Route::get('pages/{lang}',function($lang){
 // how to fetch data from database
 
 Route::get('carslist', [CarsListController::class, 'show']);
+
+// Aggregate methods mean sum,min,max etc
+
+Route::get('carslist/sum', [CarsListController::class, 'operation']);
