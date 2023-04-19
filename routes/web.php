@@ -10,6 +10,7 @@ use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AccessorController;
 use App\Http\Controllers\AuthUserController;
 use App\Http\Controllers\CarsListController;
 use App\Http\Controllers\EmployeeController;
@@ -166,3 +167,7 @@ Route::get('carslist/sum', [CarsListController::class, 'operation']);
 // Join to get data from two tables
 
 Route::get('product-details',[ProductDetailsController::class, 'show']);
+
+// Accessor to add something in the data when you fetch it from database and you want to add something in that data and then show to the user
+
+Route::get('accessor',[AccessorController::class, 'index']);
