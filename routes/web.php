@@ -16,6 +16,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\PostFormDataController;
+use App\Http\Controllers\ProductDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -161,3 +162,7 @@ Route::get('carslist', [CarsListController::class, 'show']);
 // Aggregate methods mean sum,min,max etc
 
 Route::get('carslist/sum', [CarsListController::class, 'operation']);
+
+// Join to get data from two tables
+
+Route::get('product-details',[ProductDetailsController::class, 'show']);
