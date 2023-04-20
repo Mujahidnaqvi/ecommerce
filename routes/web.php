@@ -176,3 +176,7 @@ Route::get('accessor',[AccessorController::class, 'index']);
 // Mutator Modify data before it saves to database
 
 Route::get('mutator',[MutatorController::class, 'add']);
+
+// Relations One to One
+
+Route::get('one-to-one',[ProductController::class, 'relationShow']);
