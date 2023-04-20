@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class FluentStringController extends Controller
 {
@@ -65,6 +66,14 @@ class FluentStringController extends Controller
 // to use fluent string we have to add the class above as use illuminate\Support\Str; 
     public function fluentTasks(){
        $info= "hi, welcome to laravel";
+
+       $info=Str::of($info)
+       ->ucfirst($info)
+       ->replaceFirst("Hi","Hello",$info)
+       ->camel($info);
+    //    $info=Str::ucfirst($info);
+    //    $info=Str::replaceFirst("Hi","Hello",$info);
+    //    $info=Str::camel($info);
        echo $info;
     }
 }
