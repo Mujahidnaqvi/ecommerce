@@ -9,11 +9,20 @@ class Car extends Model
 {
     use HasFactory;
 
-    function getNameAttribute($value){
+    public function getNameAttribute($value){
      return lcfirst($value);
     }
 
-    function getColorAttribute($value){
+    public function getColorAttribute($value){
         return $value." Color";
     }
+
+    public function setNameAttribute($value){
+        return $this->attributes['name']= 'Awesome '. $value;
+    }
+
+    public function setModelAttribute($value){
+        return $this->attributes['model']= $value. ' Model';
+    }
+
 }

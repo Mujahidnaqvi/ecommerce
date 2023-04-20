@@ -9,6 +9,7 @@ use App\Http\Controllers\IfelseController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\ForeachController;
 use App\Http\Controllers\IncludeController;
+use App\Http\Controllers\MutatorController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AccessorController;
 use App\Http\Controllers\AuthUserController;
@@ -171,3 +172,7 @@ Route::get('product-details',[ProductDetailsController::class, 'show']);
 // Accessor to add something in the data when you fetch it from database and you want to add something in that data and then show to the user
 
 Route::get('accessor',[AccessorController::class, 'index']);
+
+// Mutator Modify data before it saves to database
+
+Route::get('mutator',[MutatorController::class, 'add']);
