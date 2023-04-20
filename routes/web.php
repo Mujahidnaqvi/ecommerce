@@ -17,6 +17,7 @@ use App\Http\Controllers\CarsListController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\FlashSessionController;
+use App\Http\Controllers\FluentStringController;
 use App\Http\Controllers\PostFormDataController;
 use App\Http\Controllers\ProductDetailsController;
 
@@ -180,3 +181,7 @@ Route::get('mutator',[MutatorController::class, 'add']);
 // Relations One to One
 
 Route::get('one-to-one',[ProductController::class, 'relationShow']);
+
+// Fluent String
+
+Route::get('fluent-string',[FluentStringController::class, 'fluentTasks']);
