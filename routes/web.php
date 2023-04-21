@@ -20,6 +20,7 @@ use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\FluentStringController;
 use App\Http\Controllers\PostFormDataController;
 use App\Http\Controllers\ProductDetailsController;
+use App\Http\Controllers\RouteModelBindingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -185,3 +186,11 @@ Route::get('one-to-one',[ProductController::class, 'relationShow']);
 // Fluent String
 
 Route::get('fluent-string',[FluentStringController::class, 'fluentTasks']);
+
+// Route Model Binding
+
+// Route::get('route-model-binding/{key}',[RouteModelBindingController::class, 'index']);
+Route::get('route-model-binding/{key:color}',[RouteModelBindingController::class, 'index']);  // for something specific from the database
+
+// Get API
+//Route::get('getApi',[getApiController::class,'data']);   // we make this in Api.php of routes as it;s API so go there
