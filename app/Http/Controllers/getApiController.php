@@ -61,4 +61,8 @@ class getApiController extends Controller
     {
         //
     }
+
+    public function getData(){
+        
+    }
 }
