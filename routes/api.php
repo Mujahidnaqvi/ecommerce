@@ -20,3 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('get-api-result',[getApiController::class,'getData']);
+
+// Get api with params
+
+Route::get('get-api-result-with-params/{id?}',[getApiController::class, 'getDataParam']);
+

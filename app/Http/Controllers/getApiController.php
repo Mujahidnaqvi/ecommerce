@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
 
 class getApiController extends Controller
 {
@@ -63,6 +64,14 @@ class getApiController extends Controller
     }
 
     public function getData(){
-        
+       return Car::all();
+    }  
+    
+    // public function getDataParam($id){
+    //     return Car::find($id);
+    //  }
+
+    public function getDataParam($id=null){
+       return $id?Car::find($id):Car::all();
     }
 }
